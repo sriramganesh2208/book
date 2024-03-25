@@ -1,0 +1,33 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s ease-in-out 0s;
+
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+  padding: 20px;
+  max-width: 1024px;
+  width: 90%; /* Adjusted to allow some margin on smaller screens */
+  margin: auto; /* Center horizontally */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.homeTitle {
+  font-size: 20px;
+  max-width: 100%; /* Allow title to take full width */
+  text-align: center; /* Center text */
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .homeContainer {
+    padding: 15px; /* Adjust padding for smaller screens */
+    gap: 20px; /* Adjust gap between items */
+    width: 95%; /* Adjusted to allow some margin on smaller screens */
+  }
+
+  .homeTitle {
+    font-size: 18px; /* Reduce title font size for smaller screens */
+  }
+}

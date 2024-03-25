@@ -1,0 +1,102 @@
+.reserve {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto; /* Enable scrolling for smaller screens */
+}
+
+.rContainer {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  max-width: 90%; /* Adjust maximum width for better responsiveness */
+  max-height: 90%; /* Limit height to 90% of viewport height */
+  overflow-y: auto; /* Enable scrolling for smaller screens */
+}
+
+.rClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increase gap for better spacing */
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Increase gap for better spacing */
+}
+
+.rTitle {
+  font-weight: 500;
+}
+
+.rDesc {
+  font-weight: 300;
+}
+
+.rMax {
+  font-size: 12px;
+}
+
+.rPrice {
+  font-weight: 500;
+}
+
+.rSelectRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 10px; /* Increase font size for better readability */
+  color: gray;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .rContainer {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .rItem {
+    flex-direction: column; /* Adjust item layout to column for smaller screens */
+    gap: 10px; /* Adjust gap between items for smaller screens */
+  }
+
+  .rSelectRooms {
+    flex-direction: column; /* Adjust room selection layout to column for smaller screens */
+    gap: 10px; /* Adjust gap between room selections for smaller screens */
+  }
+
+  .rButton {
+    padding: 15px 20px; /* Adjust button padding for smaller screens */
+  }
+}

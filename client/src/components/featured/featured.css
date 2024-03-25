@@ -1,0 +1,50 @@
+.featured {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.featuredItem {
+  position: relative;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+  flex: 1 1 300px; /* Grow and shrink based on available space, with a minimum width of 300px */
+  max-width: 100%; /* Ensure items don't exceed the container's width */
+}
+
+.featuredImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .featured {
+    gap: 10px; /* Reduce the gap between items on smaller screens */
+  }
+
+  .featuredItem {
+    flex: 1 1 calc(50% - 10px); /* Adjust the minimum width to 50% minus the gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredItem {
+    flex: 1 1 100%; /* Make items take up the full width on very small screens */
+    height: 200px; /* Reduce the height of the items for better visibility */
+  }
+}

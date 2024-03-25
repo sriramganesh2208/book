@@ -1,0 +1,230 @@
+/* Default styles */
+.listContainer {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background: rgb(238, 244, 253);
+}
+
+
+
+
+#outlined-basic {
+  height: 30px;
+  max-width: 100%; /* Adjusted for responsiveness */
+}
+
+.top {
+  
+  margin-top: 10px;
+  margin-bottom: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+
+  transition: all 0.3s ease-in-out 0s;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+
+
+  position: sticky; /* Make the section sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20vw;
+  position: sticky; /* Make the section sticky */
+  top: 48px; /* Adjust as per your design */
+  z-index: 99; /* Ensure it's above other content except for .top */
+}
+
+.in {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.checkbox {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+ 
+}
+
+.listWrapper {
+  
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.listSearch {
+
+  margin-top: 40px;
+
+  flex: 0 0 300px; /* Set a fixed width for the listSearch section */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+
+  transition: all 0.3s ease-in-out 0s;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+
+  padding: 10px;
+  border-radius: 10px;
+  height: max-content;
+  transition: all 0.3s ease-in-out 0s;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+}
+
+.lsTitle {
+  font-size: 20px;
+ 
+  margin-bottom: 10px;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem > label {
+  font-size: 12px;
+}
+
+.lsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.lsItem > span {
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lsOptions {
+  padding: 10px;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+ 
+  font-size: 12px;
+}
+
+.lsOptionInput {
+  width: 50px;
+}
+
+.listSearch > button {
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+
+  margin-top: 40px;
+
+  flex: 1 1 300px; /* Allow the listResult section to grow and shrink, with a minimum width of 300px */
+  max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .listWrapper {
+    max-width: 90%;
+  }
+
+  #outlined-basic {
+    width: 90%; /* Adjusted width for responsiveness */
+  }
+}
+
+@media (max-width: 768px) {
+  .listWrapper {
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+  }
+
+  .listSearch,
+  .listResult {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for both sections */
+    position: static; /* Remove the sticky position */
+  }
+
+  .listResult {
+    margin-top: 20px;
+  }
+
+  .top {
+    position: static; /* Remove sticky positioning */
+    box-shadow: none; /* Remove shadow */
+    background-color: transparent; /* Remove background color */
+    margin-top: 0; /* Reset margin */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .prices {
+    position: static; /* Remove sticky positioning */
+    top: auto; /* Reset top position */
+    width: 100%; /* Occupy full width */
+    margin-bottom: 10px; /* Add margin for spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    max-width: 100%;
+  }
+
+  .lsItem > input,
+  .lsItem > span {
+    width: 100%;
+  }
+
+  .lsOptionItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lsOptionInput {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+}

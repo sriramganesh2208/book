@@ -1,0 +1,47 @@
+.footer {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 12px;
+  margin: 0 auto; /* Center the footer horizontally */
+  padding: 0 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.fLists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allow lists to wrap on smaller screens */
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .fLists {
+    flex-direction: column; /* Stack lists vertically on smaller screens */
+    align-items: center; /* Center-align lists */
+    margin-bottom: 30px; /* Reduce margin for smaller screens */
+  }
+
+  .fList {
+    width: 100%; /* Set width to 100% for full width on smaller screens */
+    text-align: center; /* Center-align list items */
+    margin-bottom: 20px; /* Adjust margin between lists */
+  }
+}

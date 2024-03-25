@@ -1,0 +1,162 @@
+.header {
+  color: black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out 0s;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 0.8rem 0.6rem -0.6rem;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px auto;
+  padding: 0 20px; /* Added padding for better spacing on smaller screens */
+}
+
+.headerContainer.listMode {
+  margin-bottom: 0; /* Adjust margin for list mode */
+}
+
+.headerList {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Adjust the space between items */
+
+
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px; /* Add padding to items for better touch targets */
+  border-radius: 20px; /* Add border radius to create rounded corners */
+  border: 1px solid transparent; /* Add border to each item */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.headerListItem:hover {
+  border-color: white; /* Change border color on hover */
+}
+
+.headerDesc {
+  margin: 20px 0;
+  text-align: center; /* Center-align the description */
+}
+
+.headerBtn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px; /* Added padding for better touch targets */
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* Center the button */
+}
+
+.headerSearch {
+  height: 30px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 5px;
+  width: calc(100% - 40px); /* Adjust width for padding */
+  max-width: 100%; /* Ensure the search bar does not exceed screen width */
+  left: 20px; /* Adjust left position */
+
+  
+}
+
+.headerIcon {
+  color: lightgray;
+}
+
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .headerContainer {
+    padding: 0 10px; /* Reduce padding for smaller screens */
+  }
+
+  .headerList {
+    gap: 10px; /* Reduce the space between items */
+  }
+
+  .headerSearch {
+    width: calc(100% - 20px); /* Adjust width for padding */
+    left: 10px; /* Adjust left position */
+  }
+}
+
+
